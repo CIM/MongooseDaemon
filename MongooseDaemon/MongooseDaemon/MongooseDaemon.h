@@ -95,6 +95,31 @@
 - (void)start;
 
 /**
+ Pauses the currently running Mongoose HTTP server. Does nothing otherwise.
+ 
+ When the Mongoose HTTP server is in the paused state, polling is ceased. If left in this state all requests sent to Mongoose will eventually time out.
+ @see resume
+ @see paused
+ */
+- (void)pause;
+
+/**
+ Resumes the currently paused Mongoose HTTP server. Does nothing otherwise.
+ 
+ @see pause
+ @see paused
+ */
+- (void)resume;
+
+/**
+ A readonly property that indicates if the Mongoose HTTP server is currently paused.
+ 
+ @see pause
+ @see resume
+ */
+@property (readonly, getter = isPaused) BOOL paused;
+
+/**
  Blocks until the HTTP server is stopped. Does nothing if the server is stopped.
  */
 - (void)stop;

@@ -66,6 +66,7 @@ const char * kMongooseOptionListeningPort = "listening_port";
   struct mg_server *_server;
 }
 
+@synthesize paused = _paused;
 @synthesize documentRoot = _documentRoot;
 @synthesize listeningPort = _listeningPort;
 
@@ -113,6 +114,7 @@ const char * kMongooseOptionListeningPort = "listening_port";
 - (void)start {
   dispatch_sync(self.queue, ^{
     if (_server == NULL) {
+      _paused = NO;
       
       // start the web server
       _server = mg_create_server((__bridge void *)self);
@@ -137,8 +139,26 @@ const char * kMongooseOptionListeningPort = "listening_port";
 
 - (void)poll {
   dispatch_async(self.queue, ^{
-    if (_server) {
+    if (_server && !_paused) {
       mg_poll_server(_server, 100);
+      [self poll];
+    }
+  });
+}
+
+- (void)pause {
+  dispatch_sync(self.queue, ^{
+    // only allow pausing if the server is running
+    if (_server != NULL && !_paused && mg_poll_server(_server, 0) != 0) {
+      _paused = YES;
+    }
+  });
+}
+
+- (void)resume {
+  dispatch_sync(self.queue, ^{
+    if (_server && _paused) {
+      _paused = NO;
       [self poll];
     }
   });
@@ -149,6 +169,7 @@ const char * kMongooseOptionListeningPort = "listening_port";
     if (_server != NULL) {
       mg_destroy_server(&_server);
       _server = NULL;
+      _paused = NO;
     }
   });
 }
@@ -157,7 +178,7 @@ const char * kMongooseOptionListeningPort = "listening_port";
 #pragma mark - Public Properties
 
 + (NSString *)versionString {
-  NSString *version = [NSString stringWithFormat:@"%.1f", MongooseDaemonVersionNumber];
+  NSString *version = [NSString stringWithFormat:@"%g", MongooseDaemonVersionNumber];
   return version;
 }
 
@@ -175,6 +196,14 @@ const char * kMongooseOptionListeningPort = "listening_port";
     running = (pollDuration != 0);
   });
   return running;
+}
+
+- (BOOL)isPaused {
+  __block BOOL paused;
+  dispatch_sync(self.queue, ^{
+    paused = _paused;
+  });
+  return paused;
 }
 
 - (void)setListeningPort:(NSInteger)port {

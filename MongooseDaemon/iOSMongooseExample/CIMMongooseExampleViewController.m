@@ -59,6 +59,10 @@ NSString * const kMongooseExampleTableViewLabelCellIdentifier = @"kMongooseExamp
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.view addSubview:self.tableView];
+  
+  
+  UIBarButtonItem *pause = [[UIBarButtonItem alloc] initWithTitle:@"pause" style:UIBarButtonItemStylePlain target:self action:@selector(pause:)];
+  self.navigationItem.rightBarButtonItem = pause;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -221,6 +225,21 @@ NSString * const kMongooseExampleTableViewLabelCellIdentifier = @"kMongooseExamp
     [self.theMongoose stop];
   }
   [self.tableView reloadData];
+}
+
+- (void)pause:(id)sender {
+  if (self.theMongoose.isRunning) {
+    if (!self.theMongoose.isPaused) {
+      [self.theMongoose pause];
+    } else {
+      [self.theMongoose resume];
+    }
+  }
+  if (self.theMongoose.isPaused) {
+    [(UIBarButtonItem *)sender setTitle:@"resume"];
+  } else {
+    [(UIBarButtonItem *)sender setTitle:@"pause"];
+  }
 }
 
 
