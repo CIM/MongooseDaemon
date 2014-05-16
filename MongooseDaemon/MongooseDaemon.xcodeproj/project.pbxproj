@@ -22,11 +22,6 @@
 		19FB6BAF18428FA600C71880 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FB6BAE18428FA600C71880 /* main.m */; };
 		19FB6BB318428FA600C71880 /* CIMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FB6BB218428FA600C71880 /* CIMAppDelegate.m */; };
 		19FB6BB518428FA600C71880 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FB6BB418428FA600C71880 /* Images.xcassets */; };
-		19FB6BBB18428FA600C71880 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB6B1F1842832800C71880 /* XCTest.framework */; };
-		19FB6BBC18428FA600C71880 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB6B111842832800C71880 /* Foundation.framework */; };
-		19FB6BBD18428FA600C71880 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB6BA618428FA600C71880 /* UIKit.framework */; };
-		19FB6BC518428FA600C71880 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19FB6BC318428FA600C71880 /* InfoPlist.strings */; };
-		19FB6BC718428FA600C71880 /* iOSMongooseExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FB6BC618428FA600C71880 /* iOSMongooseExampleTests.m */; };
 		19FB6BD018428FF600C71880 /* CIMMongooseExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FB6BCF18428FF600C71880 /* CIMMongooseExampleViewController.m */; };
 		19FB6BD11842903600C71880 /* libMongooseDaemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB6B0B1842832800C71880 /* libMongooseDaemon.a */; };
 		19FB6BD41842914E00C71880 /* HelloWorld.html in Resources */ = {isa = PBXBuildFile; fileRef = 19FB6BD31842914E00C71880 /* HelloWorld.html */; };
@@ -45,13 +40,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 19FB6B0A1842832800C71880;
 			remoteInfo = MongooseDaemon;
-		};
-		19FB6BBE18428FA600C71880 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 19FB6B031842832800C71880 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19FB6BA118428FA600C71880;
-			remoteInfo = iOSMongooseExample;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -106,10 +94,6 @@
 		19FB6BB118428FA600C71880 /* CIMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIMAppDelegate.h; sourceTree = "<group>"; };
 		19FB6BB218428FA600C71880 /* CIMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIMAppDelegate.m; sourceTree = "<group>"; };
 		19FB6BB418428FA600C71880 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		19FB6BBA18428FA600C71880 /* iOSMongooseExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMongooseExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19FB6BC218428FA600C71880 /* iOSMongooseExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSMongooseExampleTests-Info.plist"; sourceTree = "<group>"; };
-		19FB6BC418428FA600C71880 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		19FB6BC618428FA600C71880 /* iOSMongooseExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSMongooseExampleTests.m; sourceTree = "<group>"; };
 		19FB6BCE18428FF600C71880 /* CIMMongooseExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIMMongooseExampleViewController.h; sourceTree = "<group>"; };
 		19FB6BCF18428FF600C71880 /* CIMMongooseExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIMMongooseExampleViewController.m; sourceTree = "<group>"; };
 		19FB6BD31842914E00C71880 /* HelloWorld.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HelloWorld.html; sourceTree = "<group>"; };
@@ -156,16 +140,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19FB6BB718428FA600C71880 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19FB6BBB18428FA600C71880 /* XCTest.framework in Frameworks */,
-				19FB6BBD18428FA600C71880 /* UIKit.framework in Frameworks */,
-				19FB6BBC18428FA600C71880 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -175,7 +149,6 @@
 				19FB6B141842832800C71880 /* MongooseDaemon */,
 				19FB6B251842832800C71880 /* MongooseDaemonTests */,
 				19FB6BA818428FA600C71880 /* iOSMongooseExample */,
-				19FB6BC018428FA600C71880 /* iOSMongooseExampleTests */,
 				19FB6B0D1842832800C71880 /* Frameworks */,
 				19FB6B0C1842832800C71880 /* Products */,
 			);
@@ -190,7 +163,6 @@
 				19FB6B1E1842832800C71880 /* MongooseDaemonTests.xctest */,
 				19FB6B7618428A7200C71880 /* MongooseDaemon.framework */,
 				19FB6BA218428FA600C71880 /* iOSMongooseExample.app */,
-				19FB6BBA18428FA600C71880 /* iOSMongooseExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,24 +251,6 @@
 				19FB6BAB18428FA600C71880 /* InfoPlist.strings */,
 				19FB6BAE18428FA600C71880 /* main.m */,
 				19FB6BB018428FA600C71880 /* iOSMongooseExample-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		19FB6BC018428FA600C71880 /* iOSMongooseExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				19FB6BC618428FA600C71880 /* iOSMongooseExampleTests.m */,
-				19FB6BC118428FA600C71880 /* Supporting Files */,
-			);
-			path = iOSMongooseExampleTests;
-			sourceTree = "<group>";
-		};
-		19FB6BC118428FA600C71880 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				19FB6BC218428FA600C71880 /* iOSMongooseExampleTests-Info.plist */,
-				19FB6BC318428FA600C71880 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -396,24 +350,6 @@
 			productReference = 19FB6BA218428FA600C71880 /* iOSMongooseExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		19FB6BB918428FA600C71880 /* iOSMongooseExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 19FB6BCB18428FA600C71880 /* Build configuration list for PBXNativeTarget "iOSMongooseExampleTests" */;
-			buildPhases = (
-				19FB6BB618428FA600C71880 /* Sources */,
-				19FB6BB718428FA600C71880 /* Frameworks */,
-				19FB6BB818428FA600C71880 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				19FB6BBF18428FA600C71880 /* PBXTargetDependency */,
-			);
-			name = iOSMongooseExampleTests;
-			productName = iOSMongooseExampleTests;
-			productReference = 19FB6BBA18428FA600C71880 /* iOSMongooseExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -424,9 +360,6 @@
 				ORGANIZATIONNAME = CIM;
 				TargetAttributes = {
 					19FB6B1D1842832800C71880 = {
-						TestTargetID = 19FB6B7518428A7200C71880;
-					};
-					19FB6BB918428FA600C71880 = {
 						TestTargetID = 19FB6B7518428A7200C71880;
 					};
 				};
@@ -447,7 +380,6 @@
 				19FB6B7518428A7200C71880 /* MongooseDaemon.framework */,
 				19FB6B1D1842832800C71880 /* MongooseDaemonTests */,
 				19FB6BA118428FA600C71880 /* iOSMongooseExample */,
-				19FB6BB918428FA600C71880 /* iOSMongooseExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -470,14 +402,6 @@
 				19FB6BAD18428FA600C71880 /* InfoPlist.strings in Resources */,
 				19FB6BDA18429C7C00C71880 /* CIMSwitchCell.xib in Resources */,
 				19FB6BB518428FA600C71880 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		19FB6BB818428FA600C71880 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19FB6BC518428FA600C71880 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,14 +479,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19FB6BB618428FA600C71880 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19FB6BC718428FA600C71880 /* iOSMongooseExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -570,11 +486,6 @@
 			isa = PBXTargetDependency;
 			target = 19FB6B0A1842832800C71880 /* libMongooseDaemon.a */;
 			targetProxy = 19FB6B221842832800C71880 /* PBXContainerItemProxy */;
-		};
-		19FB6BBF18428FA600C71880 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 19FB6BA118428FA600C71880 /* iOSMongooseExample */;
-			targetProxy = 19FB6BBE18428FA600C71880 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,14 +510,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				19FB6BAC18428FA600C71880 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		19FB6BC318428FA600C71880 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19FB6BC418428FA600C71880 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -857,53 +760,6 @@
 			};
 			name = Release;
 		};
-		19FB6BCC18428FA600C71880 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MongooseDaemon.framework/Versions/A/MongooseDaemon";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSMongooseExample/iOSMongooseExample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "iOSMongooseExampleTests/iOSMongooseExampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		19FB6BCD18428FA600C71880 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MongooseDaemon.framework/Versions/A/MongooseDaemon";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSMongooseExample/iOSMongooseExample-Prefix.pch";
-				INFOPLIST_FILE = "iOSMongooseExampleTests/iOSMongooseExampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		587062651850D18B0078C746 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1014,28 +870,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Distribution;
-		};
-		5870626A1850D18B0078C746 /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MongooseDaemon.framework/Versions/A/MongooseDaemon";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSMongooseExample/iOSMongooseExample-Prefix.pch";
-				INFOPLIST_FILE = "iOSMongooseExampleTests/iOSMongooseExampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Distribution;
 		};
@@ -1168,32 +1002,6 @@
 			};
 			name = MERC;
 		};
-		58E95BD0185F6491007E65A5 /* MERC */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MongooseDaemon.framework/Versions/A/MongooseDaemon";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSMongooseExample/iOSMongooseExample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "iOSMongooseExampleTests/iOSMongooseExampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = MERC;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1248,17 +1056,6 @@
 				58E95BCF185F6491007E65A5 /* MERC */,
 				19FB6BCA18428FA600C71880 /* Release */,
 				587062691850D18B0078C746 /* Distribution */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		19FB6BCB18428FA600C71880 /* Build configuration list for PBXNativeTarget "iOSMongooseExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				19FB6BCC18428FA600C71880 /* Debug */,
-				58E95BD0185F6491007E65A5 /* MERC */,
-				19FB6BCD18428FA600C71880 /* Release */,
-				5870626A1850D18B0078C746 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
