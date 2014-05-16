@@ -168,7 +168,11 @@ const char * kMongooseOptionListeningPort = "listening_port";
 - (BOOL)isRunning {
   __block BOOL running;
   dispatch_sync(self.queue, ^{
-    running = (_server != NULL);
+    int pollDuration = 0;
+    if (_server != NULL) {
+      pollDuration = mg_poll_server(_server, 0);
+    }
+    running = (pollDuration != 0);
   });
   return running;
 }
